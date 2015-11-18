@@ -74,6 +74,35 @@ function sayHello() {
 </body>
 </html>
 ```
+* Addition of the confirm() option:
+* 
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript Tutorial</title>
+</head>
+<body>
+<button type="button" onclick="sayHello()">Click me!</button>
+
+<script>
+function sayHello() {
+var name = prompt("Please enter name: ")
+if( name == null) {
+      if(confirm("Are you sure you do not want to enter your name?") == false) {
+            var name = prompt("Please enter name: ");
+}
+}
+  
+  if (name != null) {
+    alert("Hello, " + name + "!");
+  }
+}
+</script>
+</body>
+</html>
+```
 * Then, we'll take it up another notch and introduce arguments to replace the prompt.
 ```html
 <!DOCTYPE html>

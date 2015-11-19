@@ -16,3 +16,4 @@ Curricula
 Style of Teaching
 * Show and run the game for them first 
 * We should be coding with them to be more interactive - making them follow the slides would be too dull
+* We could use one screen for the code and the other for the HTML page that would be displayed so they could see them side by side

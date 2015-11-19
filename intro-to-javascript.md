@@ -75,7 +75,6 @@ function sayHello() {
 </html>
 ```
 * Addition of the confirm() option:
-* 
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
@@ -88,16 +87,16 @@ function sayHello() {
 
 <script>
 function sayHello() {
-var name = prompt("Please enter name: ")
-if( name == null) {
-      if(confirm("Are you sure you do not want to enter your name?") == false) {
-            var name = prompt("Please enter name: ");
-}
-}
-  
-  if (name != null) {
-    alert("Hello, " + name + "!");
-  }
+	var cancelled = false;
+	while(cancelled == false) {
+		var name = prompt("Please enter name: ");
+		if (name == "" || name == null) {
+			cancelled = confirm("Are you sure you do not want to enter your name?");
+		} else {
+			cancelled = true;
+			alert("Hello, " + name + "!");
+		}
+	}
 }
 </script>
 </body>
